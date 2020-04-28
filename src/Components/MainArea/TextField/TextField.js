@@ -9,15 +9,27 @@ import Button from "@material-ui/core/Button";
 import "./TextField.scss";
 import { FormControl, Grid } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
-  root: {},
+  root: {
+    display: "flex",
+    flexWrap: "wrap",
+  },
   modal: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
   },
+  textField: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    marginTop: theme.spacing(1),
+    width: "25ch",
+  },
+  textFieldTwo: {
+    margin: theme.spacing(1),
+  },
+
   paper: {
     backgroundColor: theme.palette.background.paper,
-    border: "2px solid #000",
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
   },
@@ -40,9 +52,9 @@ const TextFields = () => {
         className="input-search"
       />
       <SearchIcon className="search-icon" />
-      <button className="button-contact" onClick={handleOpen}>
+      <Button className="button-contact" onClick={handleOpen}>
         Add Contact
-      </button>
+      </Button>
       {/* <Models handleClose={handleClose} /> */}
       <Modal
         aria-labelledby="transition-modal-title"
@@ -56,43 +68,80 @@ const TextFields = () => {
           timeout: 500,
         }}
       >
-        <Fade in={open}>
-          <div className={classes.paper}>
-            <FormControl>
-              <h3>Add Contact</h3>
-              <Grid container>
-                <Grid item xs={6}>
-                  <TextField
-                    id="standard-basic"
-                    label="First Name"
-                   
-                  />
-                </Grid>
-                <Grid item xs={6}>
-                  <TextField
-                    id="standard-basic-two"
-                    label="Last Name"
-                   
-                  />
-                </Grid>
+        <div style={{ width: "50%" }}>
+          <Fade in={open}>
+            <div className={classes.paper}>
+              <FormControl>
+                <h3>Add Contact</h3>
+                <Grid container className="form-content">
+                  <Grid item xs={6}>
+                    <TextField
+                      className={classes.textField}
+                      id="standard-basic"
+                      label="First Name"
+                    />
+                  </Grid>
+                  <Grid item xs={6}>
+                    <TextField
+                      className={classes.textField}
+                      id="standard-basic-two"
+                      label="Last Name"
+                    />
+                  </Grid>
 
-                <Grid item xs={12}>
-                  <TextField id="standard-basic-email" label="Email Address" />
+                  <Grid item xs={12}>
+                    <TextField
+                      className={classes.textFieldTwo}
+                      id="standard-basic-email"
+                      label="Email Address"
+                      fullWidth
+                    />
+                  </Grid>
+
+                  <Grid item xs={6}>
+                    <TextField
+                      className={classes.textField}
+                      id="standard-basic-countryCode"
+                      label="Country Code"
+                    />
+                  </Grid>
+
+                  <Grid item xs={6}>
+                    <TextField
+                      className={classes.textField}
+                      id="standard-basic-phoneNumber"
+                      label="Phone Number"
+                    />
+                  </Grid>
+
+                  <Grid item xs={6}>
+                    <TextField
+                      className={classes.textField}
+                      id="standard-basic-companyName"
+                      label="Company Name"
+                    />
+                  </Grid>
+                  <Grid item xs={6}>
+                    <TextField
+                      className={classes.textField}
+                      id="standard-basic-position"
+                      label="Position"
+                    />
+                  </Grid>
                 </Grid>
-              </Grid>
-            </FormControl>
-            <div>
-              <Button
-                variant="contained"
-                size="medium"
-                color="primary"
-                className={classes.margin}
-              >
-                Medium
-              </Button>
+              </FormControl>
+              <div>
+                <Button
+                  variant="contained"
+                  size="medium"
+                  className="model-button"
+                >
+                  Add Contact
+                </Button>
+              </div>
             </div>
-          </div>
-        </Fade>
+          </Fade>
+        </div>
       </Modal>
     </div>
   );

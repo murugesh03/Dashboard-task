@@ -18,13 +18,15 @@
   top: 15px;
 }
 .button-contact {
-  margin: 0 1rem;
-  padding: 0.7rem 1rem;
-  border-radius: 5px;
-  border: none;
-  color: white;
-  background-color: #f967a0;
-}
-.model-name {
   margin: 0 1rem !important;
+  color: white !important;
+  background-color: #f967a0 !important;
+}
+.model-button {
+  margin: 1rem 0 !important;
+  background-color: #f967a0 !important;
+  color: white !important;
+}
+.form-content {
+  margin: 0.5rem 0;
 }
