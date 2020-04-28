@@ -141,6 +141,9 @@ const AddForm = ({ addContact, modalControl }) => {
         <div class="control">
           <button
             class="button is-primary"
+            style={{
+              background: "linear-gradient(to bottom, #ff5f6d, #ffc371)",
+            }}
             onClick={() => {
               addContact(data);
               modalControl(false);

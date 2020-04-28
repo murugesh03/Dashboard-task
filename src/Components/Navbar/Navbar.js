@@ -31,10 +31,26 @@ const NavBar = ({ toggler }) => {
               </span>
             </button>
           </a>
+          <a className="navbar-item">
+            <span className="icon ">
+              <i class="fas fa-search" />
+            </span>
+          </a>
         </div>
 
         <div className="navbar-end">
           {" "}
+          <a className="navbar-item">
+            <span className="icon is-small" style={{ margin: "0.2rem 0" }}>
+              <i className="fas fa-plus" />
+              <p style={{ margin: "0 0.2rem " }}>Add</p>
+            </span>
+          </a>
+          <a className="navbar-item">
+            <span className="icon ">
+              <i class="far fa-envelope" />
+            </span>
+          </a>
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link">
               Mark Henry

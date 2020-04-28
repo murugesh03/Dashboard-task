@@ -17,26 +17,11 @@ const MainArea = ({
   toggler,
 }) => {
   const [activeContact, setActiveContact] = useState(contacts[0]);
-  const [toogle, setToogle] = useState(false);
+  const [toggle, setToggle] = useState(false);
   const [modal, setModal] = useState(false);
 
   const [editModalOpen, setEditModalOpen] = useState(false);
   const [editModalData, setEditModalData] = useState({});
-
-  // var wordOne = activeContact.firstName.charAt(0);
-  // var wordTwo = activeContact.lastName.charAt(0);
-  // var words = wordOne + wordTwo;
-  // var colors = ["red", "blue", "yellow", "blueviolet"];
-  // var spans = [];
-
-  // for (var x = 0; x < words.length; x++) {
-  //   var color = colors[Math.floor(Math.random() * colors.length)]; // geting random color from array;
-  //   var span =
-  //     "<p style={{'backgroundColor: " + color + "/;'}}>"`${words}` + "</p";
-
-  //   spans.push(span);
-  // }
-  // console.log(span);
 
   return (
     <>
@@ -63,13 +48,13 @@ const MainArea = ({
           </div>
           <div className="column is-3">
             <p>Sort by:</p>
-            <div className={toogle ? "dropdown is-active" : "dropdown"}>
+            <div className={toggle ? "dropdown is-active" : "dropdown"}>
               <div className="dropdown-trigger">
                 <button
                   className="button"
                   aria-haspopup="false"
                   aria-controls="dropdown-menu"
-                  onClick={() => setToogle(!toogle)}
+                  onClick={() => setToggle(!toggle)}
                 >
                   <span>Dropdown button</span>
                   <span className="icon is-small">
@@ -83,9 +68,7 @@ const MainArea = ({
                     Dropdown item
                   </a>
                   <a class="dropdown-item">Other dropdown item</a>
-                  <a href="#" class="dropdown-item is-active">
-                    Active dropdown item
-                  </a>
+                  <a class="dropdown-item is-active">Active dropdown item</a>
                 </div>
               </div>
             </div>
@@ -98,7 +81,7 @@ const MainArea = ({
                 <input
                   className="input is-rounded input-search"
                   type="text"
-                  placeholder="Small input"
+                  placeholder="Seach Contact"
                 />
                 <AiOutlineSearch className="search-icon" />
               </div>
@@ -182,8 +165,8 @@ const MainArea = ({
                 </div>
               </div>
             </div>
-            <div className="columns">
-              <div className="column  is-half-mobile">
+            <div className="columns is-mobile">
+              <div className="column  is-full-mobile">
                 <p
                   className="title is-2 "
                   style={{ textAlign: "center" }}
@@ -196,33 +179,43 @@ const MainArea = ({
             </div>
 
             <div className="container" style={{ margin: "2rem" }}>
-              <div className="columns">
-                <div className="column is-half-mobile ">Full Name</div>
-                <div className="column is-half-mobile">
+              <div className="columns is-mobile">
+                <div className="column is-full-mobile is-half-desktop ">
+                  Full Name
+                </div>
+                <div className="column is-full-mobile is-half-desktop">
                   {`${activeContact.firstName} ${activeContact.lastName}`}
                 </div>
               </div>
-              <div className="columns">
-                <div className="column is-half-mobile ">Email</div>
-                <div className="column is-half-mobile">
+              <div className="columns  is-mobile">
+                <div className="column is-full-mobile is-half-desktop ">
+                  Email
+                </div>
+                <div className="column is-full-mobile is-half-desktop">
                   {activeContact.email}
                 </div>
               </div>
-              <div className="columns">
-                <div className="column is-half-mobile ">Phone</div>
-                <div className="column is-half-mobile">
+              <div className="columns  is-mobile">
+                <div className="column is-full-mobile is-half-desktop ">
+                  Phone
+                </div>
+                <div className="column is-full-mobile is-half-desktop">
                   {`+${activeContact.countryCode}-${activeContact.phone}`}
                 </div>
               </div>
-              <div className="columns">
-                <div className="column is-half-mobile ">Company</div>
-                <div className="column is-half-mobile">
+              <div className="columns  is-mobile">
+                <div className="column is-full-mobile is-half-desktop ">
+                  Company
+                </div>
+                <div className="column is-full-mobile is-half-desktop">
                   {activeContact.company}
                 </div>
               </div>
-              <div className="columns">
-                <div className="column is-half-mobile ">Position</div>
-                <div className="column is-half-mobile">
+              <div className="columns  is-mobile">
+                <div className="column is-full-mobile is-half-desktop ">
+                  Position
+                </div>
+                <div className="column is-full-mobile is-half-desktop">
                   {activeContact.position}
                 </div>
               </div>
