@@ -1,0 +1,30 @@
+.search-box {
+  position: relative;
+}
+.input-search {
+  width: 60%;
+  border: none;
+  background-color: #f1f1f1;
+  border-radius: 40px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+.search-icon {
+  position: absolute;
+  left: 55%;
+  top: 15px;
+}
+.button-contact {
+  margin: 0 1rem;
+  padding: 0.7rem 1rem;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: #f967a0;
+}
+.model-name {
+  margin: 0 1rem !important;
+}
