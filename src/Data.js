@@ -1,6 +1,6 @@
-const dashboard = [
+const contacts = [
   {
-    id: 1,
+    id: "a00af802-8962-11ea-bc55-0242ac130003",
     firstName: "Mike ",
     lastName: "Huston",
     email: "mikehuston@live.com",
@@ -10,17 +10,7 @@ const dashboard = [
     position: "Product Manager",
   },
   {
-    id: 2,
-    firstName: "Amazonia",
-    lastName: "",
-    email: "amazonia @live.com",
-    countryCode: 1,
-    phone: 4522558,
-    company: "Amazonia Online",
-    position: "Team Leader",
-  },
-  {
-    id: 3,
+    id: "bc7a9236-8962-11ea-bc55-0242ac130003",
     firstName: "Jennifer ",
     lastName: "Pattrick",
     email: "jenniferpatrick@live.com",
@@ -30,7 +20,7 @@ const dashboard = [
     position: "Product Manager",
   },
   {
-    id: 4,
+    id: "d601604a-8962-11ea-bc55-0242ac130003",
     firstName: "Robert",
     lastName: "Mike",
     email: "robermike@live.com",
@@ -40,7 +30,7 @@ const dashboard = [
     position: "Ceo",
   },
   {
-    id: 5,
+    id: "e54f4d5a-8962-11ea-bc55-0242ac130003",
     firstName: "Joey",
     lastName: "Clause",
     email: "joeyclause@live.com",
@@ -51,4 +41,4 @@ const dashboard = [
   },
 ];
 
-export default dashboard;
+export default contacts;

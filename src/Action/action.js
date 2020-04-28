@@ -1,58 +1,22 @@
-export const adddContact = (
-  id,
-  firstName,
-  lastName,
-  position,
-  company,
-  email,
-  phone,
-  countryCode
-) => {
+export const addContact = (payload) => {
   return {
     type: "ADD_CONTACT",
-    payLoad: {
-      id: id,
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      countryCode: countryCode,
-      phone: phone,
-      company: company,
-      position: position,
-    },
+    payload,
   };
 };
 
 export const deleteContact = (id) => {
   return {
-    type: "DELTE_CONTACT",
-    payLoad: {
+    type: "DELETE_CONTACT",
+    payload: {
       id: id,
     },
   };
 };
 
-export const updateContact = (
-  id,
-  firstName,
-  lastName,
-  position,
-  company,
-  email,
-  phone,
-  countryCode
-) => {
+export const updateContact = (payload) => {
   return {
     type: "UPDATE_CONTACT",
-    payLoad: {
-      id: id,
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      countryCode: countryCode,
-      phone: phone,
-      company: company,
-      position: position,
-    },
+    payload: payload,
   };
 };
