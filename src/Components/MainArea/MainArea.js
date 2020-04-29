@@ -102,8 +102,11 @@ const MainArea = ({
           </div>
         </div>
 
-        <div className="columns is-mobile" style={{ marginTop: "20px" }}>
-          <div className="column is-full-mobile is-half-desktop">
+        <div
+          className="columns is-tablet"
+          style={{ marginTop: "20px", marginLeft: "0" }}
+        >
+          <div className="column">
             <table className="table is-fullwidth">
               <thead>
                 <tr style={{ backgroundColor: "#f1f1f1" }}>
@@ -150,10 +153,7 @@ const MainArea = ({
               </tbody>
             </table>
           </div>
-          <div
-            className="column is-full-mobile is-half-desktop"
-            style={{ backgroundColor: "whitesmoke" }}
-          >
+          <div className="column" style={{ backgroundColor: "whitesmoke" }}>
             <div className="columns">
               <div className="column">
                 <div>
@@ -165,59 +165,41 @@ const MainArea = ({
                 </div>
               </div>
             </div>
-            <div className="columns is-mobile">
-              <div className="column  is-full-mobile">
-                <p
-                  className="title is-2 "
-                  style={{ textAlign: "center" }}
-                >{`${activeContact.firstName} ${activeContact.lastName}`}</p>
-                <p
-                  class="subtitle is-5"
-                  style={{ textAlign: "center" }}
-                >{`${activeContact.position} @ ${activeContact.company}`}</p>
-              </div>
+            <div>
+              <p
+                className="title is-2 "
+                style={{ textAlign: "center" }}
+              >{`${activeContact.firstName} ${activeContact.lastName}`}</p>
+              <p
+                class="subtitle is-5"
+                style={{ textAlign: "center" }}
+              >{`${activeContact.position} @ ${activeContact.company}`}</p>
             </div>
 
             <div className="container" style={{ margin: "2rem" }}>
-              <div className="columns is-mobile">
-                <div className="column is-full-mobile is-half-desktop ">
-                  Full Name
-                </div>
-                <div className="column is-full-mobile is-half-desktop">
+              <div className="columns is-tablet">
+                <div className="column">Full Name</div>
+                <div className="column">
                   {`${activeContact.firstName} ${activeContact.lastName}`}
                 </div>
               </div>
-              <div className="columns  is-mobile">
-                <div className="column is-full-mobile is-half-desktop ">
-                  Email
-                </div>
-                <div className="column is-full-mobile is-half-desktop">
-                  {activeContact.email}
-                </div>
+              <div className="columns is-tablet">
+                <div className="column">Email</div>
+                <div className="column">{activeContact.email}</div>
               </div>
-              <div className="columns  is-mobile">
-                <div className="column is-full-mobile is-half-desktop ">
-                  Phone
-                </div>
-                <div className="column is-full-mobile is-half-desktop">
+              <div className="columns is-tablet">
+                <div className="column">Phone</div>
+                <div className="column">
                   {`+${activeContact.countryCode}-${activeContact.phone}`}
                 </div>
               </div>
-              <div className="columns  is-mobile">
-                <div className="column is-full-mobile is-half-desktop ">
-                  Company
-                </div>
-                <div className="column is-full-mobile is-half-desktop">
-                  {activeContact.company}
-                </div>
+              <div className="columns is-tablet">
+                <div className="column">Company</div>
+                <div className="column">{activeContact.company}</div>
               </div>
-              <div className="columns  is-mobile">
-                <div className="column is-full-mobile is-half-desktop ">
-                  Position
-                </div>
-                <div className="column is-full-mobile is-half-desktop">
-                  {activeContact.position}
-                </div>
+              <div className="columns is-tablet">
+                <div className="column">Position</div>
+                <div className="column">{activeContact.position}</div>
               </div>
             </div>
           </div>

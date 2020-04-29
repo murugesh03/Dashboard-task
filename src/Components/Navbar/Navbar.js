@@ -17,10 +17,10 @@ const NavBar = ({ toggler }) => {
           aria-expanded="false"
           onClick={() => setMobileMenu(!MobileMenu)}
         >
-          <AiOutlineMenu />
+          <AiOutlineMenu style={{ margin: "1rem 0" }} />
         </a>
       </div>
-      <input type="checkbox" id="nav-toggle-state" />
+      <input type="checkbox" id="nav-toggle-state" checked={MobileMenu} />
 
       <div className="navbar-menu">
         <div className="navbar-start">

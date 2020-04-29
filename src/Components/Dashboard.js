@@ -23,7 +23,7 @@ const Dashboard = () => {
           top: 0,
           position: "fixed",
           left: sideOpen ? "0" : "-1000px",
-          transition: "left 0.5s",
+          transition: "left 0.5s"
         }}
       >
         <ul>
@@ -39,7 +39,8 @@ const Dashboard = () => {
         id="dashboard"
         style={{
           height: "100vh",
-          transition: "margin 0.5s",
+          marginLeft: sideOpen ? "70px" : "0",
+          transition: "margin 0.5s"
         }}
       >
         <MainArea toggler={toggler} />
